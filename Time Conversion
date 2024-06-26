@@ -1,0 +1,12 @@
+def timeConversion(s):
+    # Write your code here
+    t=s.split(':')
+    if s[-2:]=='PM':
+        if t[0]!='12':
+            t[0]=str(int(t[0])+12)
+    else:
+        if t[0]=='12':
+            t[0]='00'
+    nt=':'.join(t)
+    return str(nt[:-2])
+    
