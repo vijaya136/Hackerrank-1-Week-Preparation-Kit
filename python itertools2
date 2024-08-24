@@ -1,0 +1,18 @@
+import itertools
+def func(s,k):
+    res=[]
+    j=1
+    while j<=k:
+        res1=[]
+        for i in itertools.combinations(s,j):
+            x=''.join(sorted(i))
+            res1.append(x)
+        res.append(sorted(res1))
+        j+=1
+   
+    for i in range(len(res)):
+        for j in range(len(res[i])):
+            print(res[i][j])
+s,k=map(str,input().split())
+k=int(k)
+func(s,k)
