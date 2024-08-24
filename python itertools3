@@ -1,0 +1,13 @@
+import itertools
+def func(s,k):
+    res=[]
+    x=''
+    for i in itertools.combinations_with_replacement(s,k):
+        x=''.join(sorted(i))
+        res.append(x)
+    res=sorted(res)
+    for i in res:
+        print(i)
+s,k=map(str,input().split())
+k=int(k)
+func(s,k)
