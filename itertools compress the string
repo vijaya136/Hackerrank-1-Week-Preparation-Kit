@@ -1,0 +1,6 @@
+from itertools import groupby
+def func(s):
+    for k,v in groupby(s):
+        print((len(list(v)),int(k)),end=' ')
+s=input()
+func(s)
