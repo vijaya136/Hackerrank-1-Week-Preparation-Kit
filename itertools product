@@ -1,0 +1,7 @@
+import itertools
+def func(a,b):
+    for i in itertools.product(a,b):
+        print(i,end=' ')
+a=list(map(int,input().split()))
+b=list(map(int,input().split()))
+func(a,b)       
