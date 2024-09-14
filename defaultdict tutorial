@@ -1,0 +1,22 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+m,n=map(int,input().split())
+l=[]
+l2=[]
+for _ in range(m):
+    x=input()
+    l.append(x)
+
+for _ in range(n):
+    x=input()
+    l2.append(x)
+
+for i in range(len(l2)):
+    if l2[i] in l:
+        for j in range(len(l)):
+            if l2[i]==l[j]:
+                print(j+1,end=' ')
+        print()
+    else:
+        print(-1)
+
+        
